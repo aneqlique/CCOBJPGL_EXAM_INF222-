@@ -1,8 +1,6 @@
-import java.util.zip.CheckedInputStream;
-
 public class Me implements Tourist {
 
-    static int budget = 50;
+    static int budget = 1000;
 
     public void visit() {
         System.out.print("Enjoying my stay");
@@ -13,12 +11,13 @@ public class Me implements Tourist {
 
         if (budget >= boracay.airFare){
             budget -= boracay.airFare;
-             System.out.println("$___$ \nEnjoy and have a fresh vacation at Boracay!");
+            visit();
+             System.out.println("\n$___$ \nHaving a fresh vacation at Boracay!");
+             checkBudget();
         } else {
-            System.out.println("T____T \nInsuffecient budget, maybe next time!");
+            System.out.println("\nT____T \nInsuffecient budget, maybe next time!");
         }
-        
-        checkBudget();
+
          System.out.println(" ");
 
     }
@@ -28,12 +27,13 @@ public class Me implements Tourist {
 
         if (budget >= palawan.airFare){
             budget -= palawan.airFare;
-             System.out.println("$___$ \nHave a tranquil and adventurous trip around Palawan!");
+            visit();
+             System.out.println("\n$___$ \nHaving a tranquil and adventurous trip around Palawan!");
+             checkBudget();
         } else {
-            System.out.println("T____T \nInsuffecient budget, maybe next time!");    
+            System.out.println("\nT____T \nInsuffecient budget, maybe next time!");    
         }
         
-        checkBudget();
         System.out.println(" ");
 
     }
@@ -43,12 +43,13 @@ public class Me implements Tourist {
 
         if (budget >= batanes.airFare){
             budget -= batanes.airFare;
-             System.out.println("$___$ \nWelcome to home of the winds, Batanes!");
+            visit();
+             System.out.println("\n$___$ \nExploring the beauty of home of the winds, Batanes!");
+             checkBudget();
         } else {
-            System.out.println("T____T \nInsuffecient budget, maybe next time!");   
+            System.out.println("\nT____T \nInsuffecient budget, maybe next time!");   
         }
         
-        checkBudget();
         System.out.println(" ");
 
     }
@@ -58,12 +59,13 @@ public class Me implements Tourist {
 
         if (budget >= vigan.airFare ){
             budget -= vigan.airFare;
-            System.out.println("$___$ \nEnjoy your historical visit at, Vigan!");
+            visit();
+              System.out.println("\n$___$ \nAmused with the historical structures at Vigan!");
+              checkBudget();
         } else {
-            System.out.println("T____T \nInsuffecient budget, maybe next time!");    
+            System.out.println("\nT____T \nInsuffecient budget, maybe next time!");    
         }
 
-        checkBudget();
         System.out.println(" ");
     }
 
@@ -72,12 +74,13 @@ public class Me implements Tourist {
 
         if (budget >= batangas.airFare){
             budget -= batangas.airFare;
-             System.out.println("$___$ \nEnjoy the clear beach and clean air at Batangas!");
+            visit();
+             System.out.println("\n$___$ \nEnjoying the clear beach and clean air at Batangas!");
+             checkBudget();
         } else {
-            System.out.println("T____T \nInsuffecient budget, maybe next time!");
+            System.out.println("\nT____T \nInsuffecient budget, maybe next time!");
         }
-    
-        checkBudget();
+        
         System.out.println(" ");
 
     }
@@ -86,16 +89,18 @@ public class Me implements Tourist {
         System.out.println("I still have " + budget +" on me.");
         if (budget >= cebu.airFare){
             budget -= cebu.airFare;
-            System.out.println("$___$ \nWelcome to the oldest city in the Philippines, Cebu!");
+            visit();
+            System.out.println("\n$___$ \nHaving fun at the oldest city in the Philippines, Cebu!");
+            checkBudget();
         } else {
-            System.out.println("T____T \nInsuffecient budget, maybe next time!");
+            System.out.println("\nT____T \nInsuffecient budget, maybe next time!");
         }
-        checkBudget();
+        
         System.out.println(" ");
     }
 
     public void checkBudget() {
-        System.out.println("My current budget is " + budget +".");
+        System.out.println("my budget is " + budget +".");
     }
 
 }
